@@ -1,0 +1,38 @@
+{
+    "manifest_version": 3,
+    "name": "toTheNextPage",
+    "version": "1.0.0",
+    "description": "CodeUp에서 다음 페이지로 넘기는 버튼을 추가한다.",
+    "icons": {
+      "128": "images/icon.png"
+    },
+    "permissions": [
+      "storage"
+    ],
+    "host_permissions": [
+      "https://codeup.kr/*"
+    ],
+    "content_scripts": [
+      {
+        "matches": [
+          "https://codeup.kr/problem.php?id=*"
+        ],
+        "js": [
+          "app.js"
+        ],
+        "run_at": "document_idle"
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": [
+          "images/icon-48.png",
+          "images/icon-128.png"
+        ],
+        "matches": [
+          "https://codeup.kr/*"
+        ]
+      }
+    ]
+  }
+  
